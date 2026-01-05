@@ -16,41 +16,41 @@ import {
 
 export default function Home() {
   const skills = {
-    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "JavaScript"],
-    backend: ["Node.js", "Python", "Express.js", "PostgreSQL", "MongoDB", "Redis", "REST API"],
-    tools: ["Docker", "Git", "GitHub", "AWS", "CI/CD", "Linux", "Vercel"]
+    frontend: ["JavaScript", "React", "Next.js", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
+    backend: ["Node.js", "Express.js", "REST API", "PHP", "MySQL", "MongoDB"],
+    tools: ["Git", "GitHub", "VS Code", "Figma", "Postman", "npm/pnpm", "Vercel"]
   };
 
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovation",
-      period: "2021 - Present",
-      description: "Leading development of scalable web applications using React, Next.js, and Node.js. Building modern microservices architecture and implementing CI/CD pipelines."
+      title: "Full Stack Developer",
+      company: "Freelance Projects",
+      period: "2023 - Present",
+      description: "Developing web applications using modern JavaScript frameworks. Focus on creating responsive, user-friendly interfaces and robust backend APIs. Working with clients to deliver custom solutions."
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Solutions",
-      period: "2018 - 2021",
-      description: "Built and maintained enterprise-level applications with focus on performance optimization and user experience. Collaborated with cross-functional teams to deliver high-quality products."
+      title: "Web Developer",
+      company: "Learning & Building",
+      period: "2022 - 2023",
+      description: "Intensive learning of full-stack web development. Built multiple projects including e-commerce sites, portfolio websites, and web applications. Mastered React, Next.js, and Node.js ecosystem."
     }
   ];
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, real-time inventory, and admin dashboard",
-      tech: ["Next.js", "Node.js", "PostgreSQL", "Stripe"]
+      title: "Portfolio Website",
+      description: "Modern and minimalist portfolio website built with Next.js 14, featuring dark mode, responsive design, and smooth animations",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"]
     },
     {
-      title: "Real-time Chat Application",
-      description: "WebSocket-based chat app with group messaging, file sharing, and notification system",
-      tech: ["React", "Socket.io", "Express", "MongoDB"]
+      title: "Documentation Platform",
+      description: "Contributed to open-source documentation project. Improved content structure and user navigation experience",
+      tech: ["JavaScript", "Markdown", "GitHub", "Open Source"]
     },
     {
-      title: "Project Management Tool",
-      description: "Collaborative project management platform with kanban boards, time tracking, and team analytics",
-      tech: ["Vue.js", "Python", "FastAPI", "Redis"]
+      title: "Web Applications",
+      description: "Building various web applications to learn and master full-stack development. Focus on React ecosystem and modern best practices",
+      tech: ["React", "Node.js", "Express", "MongoDB"]
     }
   ];
 
@@ -62,7 +62,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
             <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-              Senior Full Stack Developer
+              Full Stack Developer
             </span>
           </div>
           
@@ -71,8 +71,8 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            Crafting elegant solutions to complex problems with modern web technologies. 
-            Based in Indonesia, building scalable applications that make a difference.
+            Passionate about building modern web applications with clean code and great user experiences. 
+            Based in Indonesia, continuously learning and growing as a developer.
           </p>
           
           <div className="flex gap-4 justify-center mt-8">

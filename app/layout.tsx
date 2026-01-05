@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Doni Nugraha - Full Stack Developer",
-  description: "Senior Full Stack Developer specializing in modern web technologies. Crafting elegant solutions with React, Next.js, Node.js, and more.",
+  description: "Full Stack Developer from Indonesia. Passionate about building modern web applications with React, Next.js, and Node.js.",
 };
 
 export default function RootLayout({
