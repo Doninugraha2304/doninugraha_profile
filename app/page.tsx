@@ -140,61 +140,51 @@ export default function Home() {
       {/* Skills Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center gap-3 mb-12"
+          >
             <Code2 className="w-8 h-8 text-zinc-900 dark:text-zinc-50" />
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-zinc-50">
               Tech Stack
             </h2>
-          </div>
+          </motion.div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="border-2 hover:border-zinc-900 dark:hover:border-zinc-100 transition-colors">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Globe className="w-6 h-6" />
-                  <h3 className="text-xl font-semibold">Frontend</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {skills.frontend.map((skill) => (
-                    <Badge key={skill} variant="secondary">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-zinc-900 dark:hover:border-zinc-100 transition-colors">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Database className="w-6 h-6" />
-                  <h3 className="text-xl font-semibold">Backend</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {skills.backend.map((skill) => (
-                    <Badge key={skill} variant="secondary">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-zinc-900 dark:hover:border-zinc-100 transition-colors">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Terminal className="w-6 h-6" />
-                  <h3 className="text-xl font-semibold">Tools & DevOps</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {skills.tools.map((skill) => (
-                    <Badge key={skill} variant="secondary">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            {["frontend", "backend", "tools"].map((category, idx) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
+              >
+                <Card className="border-2 hover:border-zinc-900 dark:hover:border-zinc-100 transition-all hover:scale-105 duration-300">
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      {category === "frontend" && <Globe className="w-6 h-6" />}
+                      {category === "backend" && <Database className="w-6 h-6" />}
+                      {category === "tools" && <Terminal className="w-6 h-6" />}
+                      <h3 className="text-xl font-semibold">
+                        {category === "frontend" && "Frontend"}
+                        {category === "backend" && "Backend"}
+                        {category === "tools" && "Tools & DevOps"}
+                      </h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {skills[category as keyof typeof skills].map((skill) => (
+                        <Badge key={skill} variant="secondary">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -202,31 +192,45 @@ export default function Home() {
       {/* Experience Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center gap-3 mb-12"
+          >
             <Layers className="w-8 h-8 text-zinc-900 dark:text-zinc-50" />
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-zinc-50">
               Experience
             </h2>
-          </div>
+          </motion.div>
           
           <div className="space-y-6">
             {experiences.map((exp, index) => (
-              <Card key={index} className="border-l-4 border-l-zinc-900 dark:border-l-zinc-100">
-                <CardContent className="pt-6">
-                  <div className="flex items-start justify-between mb-2">
-                    <div>
-                      <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-                        {exp.title}
-                      </h3>
-                      <p className="text-zinc-600 dark:text-zinc-400">{exp.company}</p>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.5 }}
+              >
+                <Card className="border-l-4 border-l-zinc-900 dark:border-l-zinc-100 hover:shadow-lg transition-shadow">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">
+                          {exp.title}
+                        </h3>
+                        <p className="text-zinc-600 dark:text-zinc-400">{exp.company}</p>
+                      </div>
+                      <Badge variant="outline">{exp.period}</Badge>
                     </div>
-                    <Badge variant="outline">{exp.period}</Badge>
-                  </div>
-                  <p className="text-zinc-600 dark:text-zinc-400 mt-3">
-                    {exp.description}
-                  </p>
-                </CardContent>
-              </Card>
+                    <p className="text-zinc-600 dark:text-zinc-400 mt-3">
+                      {exp.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -235,16 +239,30 @@ export default function Home() {
       {/* Projects Section */}
       <section className="container mx-auto px-6 py-20 bg-zinc-50 dark:bg-zinc-900/50">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center gap-3 mb-12"
+          >
             <CheckCircle2 className="w-8 h-8 text-zinc-900 dark:text-zinc-50" />
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-zinc-50">
               Featured Projects
             </h2>
-          </div>
+          </motion.div>
           
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                whileHover={{ y: -5 }}
+              >
+                <Card className="hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
                 {project.images && project.images.length > 0 && (
                   <div className="relative w-full aspect-video bg-zinc-100 dark:bg-zinc-800">
                     {project.images.length === 1 ? (
@@ -292,6 +310,7 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+            </motion.div>
             ))}
           </div>
         </div>
