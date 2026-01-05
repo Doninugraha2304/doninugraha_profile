@@ -55,7 +55,13 @@ export default function Home() {
       title: "Immigration Bontang Company Profile",
       description: "Official company profile website for Immigration Office Bontang. Features service information, news management, online forms, and admin panel for content management",
       tech: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "Blade"],
-      images: ["/Hackaton_dockumentacion.jpeg"]
+      images: []
+    },
+    {
+      title: "Hackathon Winner - 2nd Place 🏆",
+      description: "Won 2nd place in university-level hackathon competition across East Kalimantan. Developed innovative solution within limited timeframe, competing against top universities in the province",
+      tech: ["JavaScript", "React", "Node.js", "Innovation", "Team Work"],
+      images: ["/Hackaton_dockumentacion.jpeg", "/hackaton_gerade_2_profinsi kalimantan_timur.png"]
     },
     {
       title: "Portfolio Website",
