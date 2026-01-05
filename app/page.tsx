@@ -17,8 +17,8 @@ import {
 export default function Home() {
   const skills = {
     frontend: ["JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "HTML5", "CSS3"],
-    backend: ["Node.js", "Express.js", "Prisma ORM", "REST API", "PostgreSQL", "MySQL", "MongoDB"],
-    tools: ["Docker", "Git", "GitHub", "VS Code", "Postman", "npm/pnpm", "Vercel"]
+    backend: ["Node.js", "Laravel", "PHP", "Express.js", "Prisma ORM", "REST API", "MySQL", "PostgreSQL", "MongoDB"],
+    tools: ["Docker", "Git", "GitHub", "VS Code", "Postman", "Composer", "npm/pnpm", "Vercel"]
   };
 
   const experiences = [
@@ -26,13 +26,13 @@ export default function Home() {
       title: "Full Stack Developer",
       company: "Government & Enterprise Projects",
       period: "2023 - Present",
-      description: "Developing and deploying queue management systems for government institutions. Successfully implemented solutions at Immigration Office Bontang, Immigration Office Samarinda, and BPD Kaltim Sangata. Building scalable applications with Next.js, Prisma, and Docker."
+      description: "Developing and deploying web solutions for government institutions. Built queue management systems (Next.js) and company profile websites (Laravel) for Immigration Offices. Successfully delivered projects at Immigration Office Bontang, Immigration Office Samarinda, and BPD Kaltim Sangata."
     },
     {
       title: "Web Developer",
       company: "Learning & Building",
       period: "2022 - 2023",
-      description: "Intensive learning of full-stack web development. Built multiple projects including queue management systems, portfolio websites, and web applications. Mastered React, Next.js, Prisma ORM, and Docker containerization."
+      description: "Intensive learning of full-stack web development with both modern JavaScript and PHP frameworks. Built multiple projects including queue management systems, company profiles, and web applications. Mastered React, Next.js, Laravel, Prisma ORM, and Docker."
     }
   ];
 
@@ -43,14 +43,14 @@ export default function Home() {
       tech: ["Next.js", "Tailwind CSS", "Shadcn UI", "Prisma", "Docker", "Lucide"]
     },
     {
+      title: "Immigration Bontang Company Profile",
+      description: "Official company profile website for Immigration Office Bontang. Features service information, news management, online forms, and admin panel for content management",
+      tech: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "Blade"]
+    },
+    {
       title: "Portfolio Website",
       description: "Modern and minimalist portfolio website built with Next.js 14, featuring dark mode, responsive design, and smooth animations",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"]
-    },
-    {
-      title: "Documentation Platform",
-      description: "Contributed to open-source documentation project. Improved content structure and user navigation experience",
-      tech: ["JavaScript", "Markdown", "GitHub", "Open Source"]
     }
   ];
 
@@ -72,7 +72,7 @@ export default function Home() {
           
           <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
             Building production-ready web applications for government and enterprise clients. 
-            Based in Indonesia, specializing in Next.js, Prisma, and modern full-stack development.
+            Based in Indonesia, specializing in Laravel, Next.js, and modern full-stack development.
           </p>
           
           <div className="flex gap-4 justify-center mt-8">
