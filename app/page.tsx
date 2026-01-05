@@ -1,6 +1,14 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { 
   Code2, 
   Database, 
@@ -40,17 +48,20 @@ export default function Home() {
     {
       title: "Queue Management System",
       description: "Enterprise queue management system deployed at multiple government institutions including Immigration Office Bontang, Immigration Office Samarinda, and BPD Kaltim Sangata. Features real-time queue tracking, digital display, and admin dashboard",
-      tech: ["Next.js", "Tailwind CSS", "Shadcn UI", "Prisma", "Docker", "Lucide"]
+      tech: ["Next.js", "Tailwind CSS", "Shadcn UI", "Prisma", "Docker", "Lucide"],
+      images: ["/System_queue.png", "/Sytem_queue_pic_2.png", "/system_queue_3.png"]
     },
     {
       title: "Immigration Bontang Company Profile",
       description: "Official company profile website for Immigration Office Bontang. Features service information, news management, online forms, and admin panel for content management",
-      tech: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "Blade"]
+      tech: ["Laravel", "MySQL", "Tailwind CSS", "PHP", "Blade"],
+      images: ["/Hackaton_dockumentacion.jpeg"]
     },
     {
       title: "Portfolio Website",
       description: "Modern and minimalist portfolio website built with Next.js 14, featuring dark mode, responsive design, and smooth animations",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"]
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+      images: []
     }
   ];
 
@@ -199,7 +210,38 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
+                {project.images && project.images.length > 0 && (
+                  <div className="relative w-full aspect-video bg-zinc-100 dark:bg-zinc-800">
+                    {project.images.length === 1 ? (
+                      <Image
+                        src={project.images[0]}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <Carousel className="w-full h-full">
+                        <CarouselContent>
+                          {project.images.map((img, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <div className="relative w-full aspect-video">
+                                <Image
+                                  src={img}
+                                  alt={`${project.title} ${imgIndex + 1}`}
+                                  fill
+                                  className="object-cover"
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-2" />
+                        <CarouselNext className="right-2" />
+                      </Carousel>
+                    )}
+                  </div>
+                )}
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
                     {project.title}
