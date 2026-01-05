@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 import { 
   Code2, 
   Database, 
@@ -75,24 +78,49 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-950 dark:to-black">
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20 md:py-32">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center gap-2 mb-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto text-center space-y-6"
+        >
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="inline-flex items-center gap-2 mb-4"
+          >
             <Sparkles className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
             <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
               Full Stack Developer
             </span>
-          </div>
+          </motion.div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50"
+          >
             Doni Nugraha
-          </h1>
+          </motion.h1>
           
-          <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto"
+          >
             Building production-ready web applications for government and enterprise clients. 
             Based in Indonesia, specializing in Laravel, Next.js, and modern full-stack development.
-          </p>
+          </motion.p>
           
-          <div className="flex gap-4 justify-center mt-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="flex gap-4 justify-center mt-8"
+          >
             <Button size="lg" className="gap-2" asChild>
               <a href="mailto:doninugraha2304@gmail.com">
                 <Mail className="w-4 h-4" />
@@ -105,8 +133,8 @@ export default function Home() {
                 GitHub
               </a>
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Skills Section */}
