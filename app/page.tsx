@@ -16,27 +16,32 @@ import {
 
 export default function Home() {
   const skills = {
-    frontend: ["JavaScript", "React", "Next.js", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
-    backend: ["Node.js", "Express.js", "REST API", "PHP", "MySQL", "MongoDB"],
-    tools: ["Git", "GitHub", "VS Code", "Figma", "Postman", "npm/pnpm", "Vercel"]
+    frontend: ["JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "HTML5", "CSS3"],
+    backend: ["Node.js", "Express.js", "Prisma ORM", "REST API", "PostgreSQL", "MySQL", "MongoDB"],
+    tools: ["Docker", "Git", "GitHub", "VS Code", "Postman", "npm/pnpm", "Vercel"]
   };
 
   const experiences = [
     {
       title: "Full Stack Developer",
-      company: "Freelance Projects",
+      company: "Government & Enterprise Projects",
       period: "2023 - Present",
-      description: "Developing web applications using modern JavaScript frameworks. Focus on creating responsive, user-friendly interfaces and robust backend APIs. Working with clients to deliver custom solutions."
+      description: "Developing and deploying queue management systems for government institutions. Successfully implemented solutions at Immigration Office Bontang, Immigration Office Samarinda, and BPD Kaltim Sangata. Building scalable applications with Next.js, Prisma, and Docker."
     },
     {
       title: "Web Developer",
       company: "Learning & Building",
       period: "2022 - 2023",
-      description: "Intensive learning of full-stack web development. Built multiple projects including e-commerce sites, portfolio websites, and web applications. Mastered React, Next.js, and Node.js ecosystem."
+      description: "Intensive learning of full-stack web development. Built multiple projects including queue management systems, portfolio websites, and web applications. Mastered React, Next.js, Prisma ORM, and Docker containerization."
     }
   ];
 
   const projects = [
+    {
+      title: "Queue Management System",
+      description: "Enterprise queue management system deployed at multiple government institutions including Immigration Office Bontang, Immigration Office Samarinda, and BPD Kaltim Sangata. Features real-time queue tracking, digital display, and admin dashboard",
+      tech: ["Next.js", "Tailwind CSS", "Shadcn UI", "Prisma", "Docker", "Lucide"]
+    },
     {
       title: "Portfolio Website",
       description: "Modern and minimalist portfolio website built with Next.js 14, featuring dark mode, responsive design, and smooth animations",
@@ -46,11 +51,6 @@ export default function Home() {
       title: "Documentation Platform",
       description: "Contributed to open-source documentation project. Improved content structure and user navigation experience",
       tech: ["JavaScript", "Markdown", "GitHub", "Open Source"]
-    },
-    {
-      title: "Web Applications",
-      description: "Building various web applications to learn and master full-stack development. Focus on React ecosystem and modern best practices",
-      tech: ["React", "Node.js", "Express", "MongoDB"]
     }
   ];
 
@@ -71,8 +71,8 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            Passionate about building modern web applications with clean code and great user experiences. 
-            Based in Indonesia, continuously learning and growing as a developer.
+            Building production-ready web applications for government and enterprise clients. 
+            Based in Indonesia, specializing in Next.js, Prisma, and modern full-stack development.
           </p>
           
           <div className="flex gap-4 justify-center mt-8">
