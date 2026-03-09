@@ -572,6 +572,19 @@ section {
   box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
 }
 
+.avatar-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
+  border: 3px solid transparent;
+  background: var(--bg-secondary);
+}
+
 .about-tag {
   display: flex;
   align-items: center;
