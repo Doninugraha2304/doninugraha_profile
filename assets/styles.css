@@ -5,8 +5,8 @@
   --bg-card: rgba(13, 21, 38, 0.8);
   --accent-cyan: #00d4ff;
   --accent-purple: #7c3aed;
-  --accent-gradient: linear-gradient(135deg, #00d4ff, #7c3aed);
-  --accent-gradient-text: linear-gradient(90deg, #00d4ff, #a855f7);
+  --accent-gradient: #00d4ff;
+  --accent-gradient-text: #00d4ff;
   --text-primary: #f0f6ff;
   --text-secondary: #8892a4;
   --text-muted: #4a5568;
@@ -72,7 +72,7 @@ body {
 .orb-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, #00d4ff, transparent 70%);
+  background: rgba(0, 212, 255, 0.1);
   top: -200px;
   right: -100px;
 }
@@ -80,7 +80,7 @@ body {
 .orb-2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, #7c3aed, transparent 70%);
+  background: rgba(124, 58, 237, 0.1);
   bottom: 30%;
   left: -150px;
 }
@@ -88,7 +88,7 @@ body {
 .orb-3 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, #a855f7, transparent 70%);
+  background: rgba(168, 85, 247, 0.08);
   bottom: -100px;
   right: 20%;
 }
@@ -109,10 +109,7 @@ section {
 
 /* ===== TYPOGRAPHY ===== */
 .gradient-text {
-  background: var(--accent-gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-cyan);
 }
 
 .section-badge {
@@ -373,10 +370,7 @@ section {
 .stat-num {
   font-size: 1.8rem;
   font-weight: 800;
-  background: var(--accent-gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-cyan);
   line-height: 1;
 }
 
@@ -522,7 +516,7 @@ section {
 
 /* ===== ABOUT ===== */
 #about {
-  background: linear-gradient(180deg, transparent, rgba(13, 21, 38, 0.4), transparent);
+  background: transparent;
 }
 
 .about-grid {
@@ -542,11 +536,8 @@ section {
   position: absolute;
   inset: -16px;
   border-radius: 50%;
-  border: 2px solid transparent;
-  background: var(--accent-gradient) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
+  border: 2px solid var(--accent-cyan);
+  opacity: 0.5;
   animation: spin-slow 10s linear infinite;
 }
 
@@ -789,7 +780,7 @@ section {
 
 /* ===== PROJECTS ===== */
 #projects {
-  background: linear-gradient(180deg, transparent, rgba(13, 21, 38, 0.5), transparent);
+  background: transparent;
 }
 
 .projects-grid {
@@ -836,7 +827,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, var(--bg-card) 100%);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .banner-blue   { background: #0c1a2e; }
@@ -1408,7 +1399,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 16px 72px 16px 20px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
+  background: rgba(0, 0, 0, 0.65);
   z-index: 2;
   pointer-events: none;
 }
