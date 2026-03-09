@@ -839,12 +839,12 @@ section {
   background: linear-gradient(to bottom, transparent 50%, var(--bg-card) 100%);
 }
 
-.banner-blue { background: linear-gradient(135deg, #0a2440, #0d4f8c, #00d4ff20); }
-.banner-green { background: linear-gradient(135deg, #0a2e1a, #0d6b3a, #22c55e20); }
-.banner-purple { background: linear-gradient(135deg, #1a0a35, #4c1d8c, #7c3aed20); }
-.banner-orange { background: linear-gradient(135deg, #2e1a0a, #8c4d0d, #f97316 20); }
-.banner-teal { background: linear-gradient(135deg, #0a2e2e, #0d6b5a, #06b6d420); }
-.banner-rose { background: linear-gradient(135deg, #2e0a1a, #7c1d3a, #f43f5e30); }
+.banner-blue   { background: #0c1a2e; }
+.banner-green  { background: #0a1a10; }
+.banner-purple { background: #130a26; }
+.banner-orange { background: #1e1005; }
+.banner-teal   { background: #091a1a; }
+.banner-rose   { background: #1e0810; }
 
 .project-banner img {
   width: 100%;
