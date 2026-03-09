@@ -830,6 +830,8 @@ section {
 .banner-green { background: linear-gradient(135deg, #0a2e1a, #0d6b3a, #22c55e20); }
 .banner-purple { background: linear-gradient(135deg, #1a0a35, #4c1d8c, #7c3aed20); }
 .banner-orange { background: linear-gradient(135deg, #2e1a0a, #8c4d0d, #f97316 20); }
+.banner-teal { background: linear-gradient(135deg, #0a2e2e, #0d6b5a, #06b6d420); }
+.banner-rose { background: linear-gradient(135deg, #2e0a1a, #7c1d3a, #f43f5e20); }
 
 .project-banner img {
   width: 100%;
@@ -905,6 +907,30 @@ section {
   font-size: 0.75rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
+}
+
+.project-visit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: 16px;
+  align-self: flex-start;
+}
+
+.project-visit-link:hover {
+  background: rgba(0, 212, 255, 0.16);
+  border-color: rgba(0, 212, 255, 0.5);
+  transform: translateX(3px);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.2);
 }
 
 .project-status {
