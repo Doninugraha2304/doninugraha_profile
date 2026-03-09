@@ -162,7 +162,7 @@ form?.addEventListener('submit', (e) => {
 
   setTimeout(() => {
     btnSubmit.textContent = '✓ Pesan Terkirim!';
-    btnSubmit.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+    btnSubmit.style.background = '#22c55e';
     setTimeout(() => {
       btnSubmit.textContent = 'Kirim Pesan';
       btnSubmit.style.background = '';
@@ -174,6 +174,16 @@ form?.addEventListener('submit', (e) => {
 
 // Init
 document.addEventListener('DOMContentLoaded', () => {
+  // Theme toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light');
+  }
+  themeToggle?.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  });
+
   setTimeout(type, 500);
   initReveal();
   initGallery();
